@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMY-CERT | Community Emergency Response Team</title>
+    <meta name="description" content="AMY-CERT Community Emergency Response Team - Trained volunteers ready to assist their communities during disasters and emergencies.">
+    <meta name="keywords" content="CERT, Community Emergency Response Team, disaster response, emergency preparedness, volunteer">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="AMY-CERT | Community Emergency Response Team">
+    <meta property="og:description" content="Trained volunteers ready to assist their communities during disasters and emergencies.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://amycert.org">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f0e8;
+            color: #1e293b;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a5f 0%, #0f2847 50%, #0a1929 100%);
+        }
+        .nav-link.active {
+            color: #2563eb;
+            font-weight: 700;
+        }
+        .emergency-pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .impact-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .impact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <header id="header" class="bg-white/95 backdrop-blur-md fixed top-0 left-0 right-0 z-50 border-b border-blue-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <i class="fas fa-shield-alt text-blue-600 text-2xl mr-3"></i>
+                    <a href="index.html" class="text-xl font-bold text-slate-800">AMY-CERT</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex md:space-x-8">
+                    <a href="#about" class="nav-link text-slate-600 hover:text-blue-600 transition duration-150">About</a>
+                    <a href="#training" class="nav-link text-slate-600 hover:text-blue-600 transition duration-150">Training</a>
+                    <a href="#volunteer" class="nav-link text-slate-600 hover:text-blue-600 transition duration-150">Volunteer</a>
+                    <a href="#resources" class="nav-link text-slate-600 hover:text-blue-600 transition duration-150">Resources</a>
+                    <a href="contact.html" class="nav-link text-slate-600 hover:text-blue-600 transition duration-150">Contact</a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-slate-600 p-2" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu" class="hidden md:hidden">
+                <nav class="flex flex-col px-2 py-4 space-y-3 bg-white border-t border-blue-100">
+                    <a href="#about" class="nav-link text-slate-600 hover:text-blue-600 transition duration-150 py-2 px-3 rounded-lg hover:bg-blue-50">About</a>
+                    <a href="#training" class="nav-link text-slate-600 hover:text-blue-600 transition duration-150 py-2 px-3 rounded-lg hover:bg-blue-50">Training</a>
+                    <a href="#volunteer" class="nav-link text-slate-600 hover:text-blue-600 transition duration-150 py-2 px-3 rounded-lg hover:bg-blue-50">Volunteer</a>
+                    <a href="#resources" class="nav-link text-slate-600 hover:text-blue-600 transition duration-150 py-2 px-3 rounded-lg hover:bg-blue-50">Resources</a>
+                    <a href="contact.html" class="nav-link text-slate-600 hover:text-blue-600 transition duration-150 py-2 px-3 rounded-lg hover:bg-blue-50">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-gradient pt-24 pb-16 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <div class="emergency-pulse text-6xl mb-6">🛡️</div>
+                    <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-6">
+                        AMY-CERT<br>
+                        <span class="text-yellow-300">Community Emergency Response Team</span>
+                    </h1>
+                    <p class="mt-6 max-w-4xl mx-auto text-xl md:text-2xl text-blue-100">
+                        Trained volunteers ready to assist their communities during disasters and emergencies. 
+                        Together, we build resilient neighborhoods.
+                    </p>
+                    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="volunteer-form.html" class="bg-yellow-500 text-black font-bold py-4 px-8 rounded-lg text-lg hover:bg-yellow-400 transition duration-150">
+                            <i class="fas fa-hands-helping mr-2"></i>
+                            Become a Volunteer
+                        </a>
+                        <a href="#training" class="bg-white text-blue-600 font-bold py-4 px-8 rounded-lg text-lg hover:bg-blue-50 transition duration-150">
+                            <i class="fas fa-graduation-cap mr-2"></i>
+                            View Training
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-slate-800 mb-4">What is CERT?</h2>
+                    <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+                        The Community Emergency Response Team (CERT) program educates volunteers about disaster preparedness 
+                        and trains them in basic disaster response skills.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center p-8 bg-white rounded-xl shadow-sm border border-slate-200">
+                        <div class="text-5xl mb-4">🏠</div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">Community First</h3>
+                        <p class="text-slate-600">CERT volunteers help their neighbors during emergencies when professional responders may be overwhelmed or delayed.</p>
+                    </div>
+                    <div class="text-center p-8 bg-white rounded-xl shadow-sm border border-slate-200">
+                        <div class="text-5xl mb-4">📚</div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">Professional Training</h3>
+                        <p class="text-slate-600">Members receive training in fire safety, light search and rescue, team organization, and disaster medical operations.</p>
+                    </div>
+                    <div class="text-center p-8 bg-white rounded-xl shadow-sm border border-slate-200">
+                        <div class="text-5xl mb-4">🤝</div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">Build Resilience</h3>
+                        <p class="text-slate-600">By working together, we create stronger, more prepared communities that can respond effectively to any emergency.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Training Section -->
+        <section id="training" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-slate-800 mb-4">CERT Training</h2>
+                    <p class="text-xl text-slate-600">Comprehensive training to prepare you for emergency situations</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="impact-card text-center p-6 bg-blue-50 rounded-xl border border-blue-200">
+                        <i class="fas fa-fire-extinguisher text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Fire Safety</h3>
+                        <p class="text-slate-600 text-sm">Learn fire suppression techniques and safety protocols</p>
+                    </div>
+                    <div class="impact-card text-center p-6 bg-green-50 rounded-xl border border-green-200">
+                        <i class="fas fa-first-aid text-4xl text-green-600 mb-4"></i>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Medical Operations</h3>
+                        <p class="text-slate-600 text-sm">Basic first aid, triage, and medical treatment skills</p>
+                    </div>
+                    <div class="impact-card text-center p-6 bg-orange-50 rounded-xl border border-orange-200">
+                        <i class="fas fa-search text-4xl text-orange-600 mb-4"></i>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Search & Rescue</h3>
+                        <p class="text-slate-600 text-sm">Light search and rescue techniques for collapsed structures</p>
+                    </div>
+                    <div class="impact-card text-center p-6 bg-purple-50 rounded-xl border border-purple-200">
+                        <i class="fas fa-users text-4xl text-purple-600 mb-4"></i>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Team Organization</h3>
+                        <p class="text-slate-600 text-sm">Effective team coordination and communication</p>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <a href="contact.html" class="bg-blue-600 text-white font-bold py-4 px-8 rounded-lg text-lg hover:bg-blue-700 transition duration-150 inline-block">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        View Training Schedule
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Volunteer Section -->
+        <section id="volunteer" class="py-20 bg-blue-600 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Join Our Team</h2>
+                    <p class="text-xl text-blue-100">Every volunteer makes a difference in someone's life</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center p-8 bg-blue-700 rounded-xl">
+                        <i class="fas fa-user-plus text-4xl text-yellow-300 mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-4">Become a Member</h3>
+                        <p class="text-blue-100 mb-6">Join our network of trained emergency responders and community helpers.</p>
+                        <a href="volunteer-form.html" class="bg-yellow-500 text-black font-bold py-3 px-6 rounded-lg hover:bg-yellow-400 transition duration-150 inline-block">
+                            Sign Up Today
+                        </a>
+                    </div>
+                    <div class="text-center p-8 bg-blue-700 rounded-xl">
+                        <i class="fas fa-graduation-cap text-4xl text-yellow-300 mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-4">Get Trained</h3>
+                        <p class="text-blue-100 mb-6">Receive professional CERT training at no cost to you.</p>
+                        <a href="#training" class="bg-yellow-500 text-black font-bold py-3 px-6 rounded-lg hover:bg-yellow-400 transition duration-150 inline-block">
+                            View Courses
+                        </a>
+                    </div>
+                    <div class="text-center p-8 bg-blue-700 rounded-xl">
+                        <i class="fas fa-bullhorn text-4xl text-yellow-300 mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-4">Spread the Word</h3>
+                        <p class="text-blue-100 mb-6">Help us reach more community members by sharing our mission.</p>
+                        <a href="contact.html" class="bg-yellow-500 text-black font-bold py-3 px-6 rounded-lg hover:bg-yellow-400 transition duration-150 inline-block">
+                            Share Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-slate-800 mb-4">Emergency Resources</h2>
+                    <p class="text-xl text-slate-600">Essential information for disaster preparedness</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="p-6 border border-slate-200 rounded-xl hover:shadow-lg transition duration-150">
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">
+                            <i class="fas fa-file-alt text-blue-600 mr-2"></i>
+                            Emergency Planning Guide
+                        </h3>
+                        <p class="text-slate-600 mb-4">Comprehensive disaster preparedness checklist for families.</p>
+                        <a href="contact.html" class="text-blue-600 font-semibold hover:text-blue-700">Learn More →</a>
+                    </div>
+                    <div class="p-6 border border-slate-200 rounded-xl hover:shadow-lg transition duration-150">
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">
+                            <i class="fas fa-kit-medical text-green-600 mr-2"></i>
+                            Emergency Kit Checklist
+                        </h3>
+                        <p class="text-slate-600 mb-4">Essential supplies every household should have ready.</p>
+                        <a href="contact.html" class="text-blue-600 font-semibold hover:text-blue-700">Download →</a>
+                    </div>
+                    <div class="p-6 border border-slate-200 rounded-xl hover:shadow-lg transition duration-150">
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">
+                            <i class="fas fa-map-marked-alt text-red-600 mr-2"></i>
+                            Evacuation Routes
+                        </h3>
+                        <p class="text-slate-600 mb-4">Know your local evacuation routes and shelter locations.</p>
+                        <a href="contact.html" class="text-blue-600 font-semibold hover:text-blue-700">View Map →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact-footer" class="py-16 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-shield-alt text-blue-500 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold">AMY-CERT</h3>
+                    </div>
+                    <p class="text-slate-300 mb-4">Community Emergency Response Team - Trained volunteers ready to assist their communities during disasters and emergencies.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-slate-400 hover:text-white" aria-label="Facebook"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-white" aria-label="Twitter"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-white" aria-label="Instagram"><i class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact Us</h4>
+                    <div class="space-y-3">
+                        <p class="text-slate-300">
+                            <i class="fas fa-envelope text-blue-500 mr-2"></i>
+                            <a href="mailto:info@amycert.org" class="hover:text-white">info@amycert.org</a>
+                        </p>
+                        <p class="text-slate-300">
+                            <i class="fas fa-globe text-blue-500 mr-2"></i>
+                            <a href="https://amycert.org" class="hover:text-white">amycert.org</a>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="#about" class="block text-slate-300 hover:text-white">About CERT</a>
+                        <a href="#training" class="block text-slate-300 hover:text-white">Training Programs</a>
+                        <a href="volunteer-form.html" class="block text-slate-300 hover:text-white">Volunteer Registration</a>
+                        <a href="#resources" class="block text-slate-300 hover:text-white">Emergency Resources</a>
+                        <a href="contact.html" class="block text-slate-300 hover:text-white">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-slate-700 mt-12 pt-8 text-center">
+                <p class="text-slate-400">&copy; 2025 AMY-CERT. All rights reserved. Built with ❤️ for community safety.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+                    mobileMenu.classList.toggle('hidden');
+                    mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+                    
+                    const icon = mobileMenuBtn.querySelector('i');
+                    if (icon) {
+                        icon.className = mobileMenu.classList.contains('hidden') ? 'fas fa-bars text-xl' : 'fas fa-times text-xl';
+                    }
+                });
+
+                // Close mobile menu when clicking on a link
+                mobileMenu.querySelectorAll('a').forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                        const icon = mobileMenuBtn.querySelector('i');
+                        if (icon) {
+                            icon.className = 'fas fa-bars text-xl';
+                        }
+                    });
+                });
+            }
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Active navigation highlighting
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            function highlightNav() {
+                const scrollPosition = window.scrollY + 100;
+
+                sections.forEach(function(section) {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute('id');
+
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        navLinks.forEach(function(link) {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === '#' + sectionId) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', highlightNav);
+            highlightNav();
+        });
+    </script>
+</body>
+</html>

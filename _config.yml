@@ -1,0 +1,55 @@
+name: amycert-site
+title: AMY-CERT Community Emergency Response Team
+description: Static website for AMY-CERT volunteer registration and emergency preparedness
+url: https://amycert.org
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+encoding: utf-8
+
+# Theme (for Jekyll if used)
+# theme: minima
+
+# Exclude from build
+exclude:
+  - node_modules
+  - vendor
+  - .env
+  - .env.example
+  - "*.sql"
+  - README.md
+  - SECURITY.md
+  - LICENSE
+
+# Include in build
+include:
+  - _headers
+  - _redirects
+
+# Plugins (if using Jekyll)
+plugins: []
+
+# Site metadata
+author:
+  name: AMY-CERT
+  email: info@amycert.org
+
+# Social links
+social:
+  facebook: ""
+  twitter: ""
+  instagram: ""
+
+# SEO settings
+logo: /assets/images/logo.png
+twitter:
+  card: summary_large_image
+
+# Analytics (add your tracking IDs)
+google_analytics: ""
+
+# Contact information
+contact:
+  email: info@amycert.org
+  volunteer_email: volunteers@amycert.org
