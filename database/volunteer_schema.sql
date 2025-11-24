@@ -22,8 +22,9 @@ CREATE TABLE IF NOT EXISTS volunteers (
     availability_notes TEXT,
     how_heard TEXT,
     motivation TEXT,
-    code_of_conduct_accepted INTEGER NOT NULL DEFAULT 0,
-    terms_accepted INTEGER NOT NULL DEFAULT 0,
+    -- Boolean values: 0 = false, 1 = true (SQLite convention)
+    code_of_conduct_accepted INTEGER NOT NULL DEFAULT 0 CHECK (code_of_conduct_accepted IN (0, 1)),
+    terms_accepted INTEGER NOT NULL DEFAULT 0 CHECK (terms_accepted IN (0, 1)),
     status TEXT NOT NULL DEFAULT 'pending',
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     updated_at DATETIME DEFAULT CURRENT_TIMESTAMP

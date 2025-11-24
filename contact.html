@@ -267,8 +267,19 @@
                 contactForm.addEventListener('submit', function(e) {
                     e.preventDefault();
                     
-                    // In production, submit to Cloudflare Workers
-                    alert('Thank you for your message! We will get back to you soon.');
+                    // Create and show success notification
+                    const notification = document.createElement('div');
+                    notification.id = 'successNotification';
+                    notification.className = 'fixed top-20 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-8 py-4 rounded-lg shadow-lg z-50 flex items-center space-x-3';
+                    notification.innerHTML = '<i class="fas fa-check-circle text-2xl"></i><span>Thank you for your message! We will get back to you soon.</span>';
+                    document.body.appendChild(notification);
+                    
+                    // Remove notification after 5 seconds
+                    setTimeout(function() {
+                        notification.remove();
+                    }, 5000);
+                    
+                    // In production, submit to Cloudflare Workers API
                     contactForm.reset();
                 });
             }

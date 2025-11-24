@@ -692,14 +692,26 @@
                 });
 
                 if (isValid) {
-                    // Show success message (in production, this would submit to the API)
+                    // Show success message using DOM manipulation
                     const submitBtn = document.getElementById('submitBtn');
                     submitBtn.innerHTML = '<i class="fas fa-check mr-3"></i>Application Submitted!';
                     submitBtn.disabled = true;
+                    submitBtn.classList.remove('from-blue-600', 'to-blue-700');
                     submitBtn.classList.add('bg-green-600');
                     
-                    // In production, you would submit the form data to Cloudflare Workers/D1
-                    alert('Thank you for your application! We will contact you within 5-7 business days.');
+                    // Create and show success notification
+                    const notification = document.createElement('div');
+                    notification.id = 'successNotification';
+                    notification.className = 'fixed top-20 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-8 py-4 rounded-lg shadow-lg z-50 flex items-center space-x-3';
+                    notification.innerHTML = '<i class="fas fa-check-circle text-2xl"></i><span>Thank you for your application! We will contact you within 5-7 business days.</span>';
+                    document.body.appendChild(notification);
+                    
+                    // Remove notification after 5 seconds
+                    setTimeout(function() {
+                        notification.remove();
+                    }, 5000);
+                    
+                    // In production, submit form data to Cloudflare Workers/D1 API
                 }
             });
         });

@@ -16,6 +16,8 @@
 }
 
 /* Utility Classes */
+/* Note: text-wrap: balance has limited browser support (Chrome 114+, Safari 17.5+)
+   Provides graceful degradation in older browsers */
 .text-balance {
     text-wrap: balance;
 }
