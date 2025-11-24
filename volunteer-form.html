@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Registration - AMY-CERT | Join Our Team</title>
+    <meta name="description" content="Register as a volunteer with AMY-CERT Community Emergency Response Team. Help your community during emergencies.">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f0e8;
+            color: #1e293b;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a5f 0%, #0f2847 50%, #0a1929 100%);
+        }
+        .form-card {
+            transition: all 0.3s ease;
+        }
+        .form-card:hover {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .pulse-heart {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        .file-upload-zone {
+            border: 2px dashed #cbd5e1;
+            transition: all 0.3s ease;
+        }
+        .file-upload-zone.dragover {
+            border-color: #2563eb;
+            background-color: #eff6ff;
+        }
+        .file-upload-zone:hover {
+            border-color: #94a3b8;
+            background-color: #f8fafc;
+        }
+        .reference-entry {
+            border-left: 4px solid #3b82f6;
+            background: #f8fafc;
+        }
+        .error-message {
+            display: none;
+            color: #dc2626;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+        .error-message.show {
+            display: block;
+        }
+        input.error, select.error, textarea.error {
+            border-color: #dc2626;
+        }
+    </style>
+</head>
+<body class="antialiased bg-slate-50">
+
+    <!-- Navigation -->
+    <header class="bg-white/95 backdrop-blur-md fixed top-0 left-0 right-0 z-50 border-b border-blue-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <i class="fas fa-shield-alt text-blue-600 text-2xl mr-3"></i>
+                    <a href="index.html" class="text-xl font-bold text-slate-800">AMY-CERT</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-slate-600 hover:text-blue-600 transition duration-150">← Back to Home</a>
+                    <a href="contact.html" class="text-slate-600 hover:text-blue-600 transition duration-150">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-slate-600 p-2" aria-label="Toggle mobile menu">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu" class="hidden md:hidden">
+                <nav class="flex flex-col px-2 py-4 space-y-3 bg-white border-t border-blue-100">
+                    <a href="index.html" class="text-slate-600 hover:text-blue-600 py-2 px-3 rounded-lg hover:bg-blue-50">← Back to Home</a>
+                    <a href="contact.html" class="text-slate-600 hover:text-blue-600 py-2 px-3 rounded-lg hover:bg-blue-50">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="hero-gradient py-20 text-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="pulse-heart text-6xl mb-6">🤝</div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                    Volunteer Registration
+                </h1>
+                <p class="text-xl md:text-2xl text-blue-100 mb-8">
+                    Join our team of dedicated volunteers making a difference during emergencies
+                </p>
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 max-w-2xl mx-auto">
+                    <p class="text-lg">
+                        <strong>Be part of something bigger.</strong> Help your community prepare for and respond to emergencies.
+                        <br><span class="text-yellow-200">Secure • Confidential • Training Provided</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Form Section -->
+        <section class="py-20">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Form Header -->
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4">Volunteer Application Form</h2>
+                    <p class="text-xl text-slate-600">Complete the form below to join our volunteer network</p>
+                    <div class="mt-4 bg-blue-50 border border-blue-200 rounded-lg p-4 max-w-2xl mx-auto">
+                        <p class="text-sm text-blue-800">
+                            <i class="fas fa-lock mr-2"></i>
+                            All data is encrypted and stored securely. Your information is protected.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Registration Form -->
+                <form id="volunteerRegistrationForm" class="space-y-8" action="https://amycert.org/api/volunteer" method="POST">
+                    
+                    <!-- Personal Information -->
+                    <div class="form-card bg-white rounded-2xl shadow-lg p-8">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-6 flex items-center">
+                            <i class="fas fa-user text-blue-600 mr-3"></i>
+                            Personal Information
+                        </h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2" for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="first_name" required 
+                                       pattern="[A-Za-z\s\-']+" 
+                                       minlength="2"
+                                       class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                       placeholder="John">
+                                <p class="error-message">Please enter a valid first name</p>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2" for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="last_name" required 
+                                       pattern="[A-Za-z\s\-']+" 
+                                       minlength="2"
+                                       class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                       placeholder="Doe">
+                                <p class="error-message">Please enter a valid last name</p>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2" for="dob">Date of Birth *</label>
+                                <input type="date" id="dob" name="date_of_birth" required 
+                                       class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                <p class="error-message">You must be at least 18 years old to volunteer</p>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2" for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone_number" required 
+                                       pattern="[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}"
+                                       class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                       placeholder="(555) 123-4567">
+                                <p class="error-message">Please enter a valid phone number</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="form-card bg-white rounded-2xl shadow-lg p-8">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-6 flex items-center">
+                            <i class="fas fa-address-card text-blue-600 mr-3"></i>
+                            Contact Information
+                        </h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="md:col-span-2">
+                                <label class="block text-sm font-medium text-slate-700 mb-2" for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required 
+                                       pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                                       class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                       placeholder="volunteer@example.com">
+                                <p class="error-message">Please enter a valid email address</p>
+                            </div>
+                            <div class="md:col-span-2">
+                                <label class="block text-sm font-medium text-slate-700 mb-2" for="streetAddress">Street Address *</label>
+                                <input type="text" id="streetAddress" name="street_address" required 
+                                       minlength="5"
+                                       class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                       placeholder="123 Main Street, Apt 4B">
+                                <p class="error-message">Please enter a valid street address</p>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2" for="city">City *</label>
+                                <input type="text" id="city" name="city" required 
+                                       pattern="[A-Za-z\s\-']+"
+                                       minlength="2"
+                                       class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                       placeholder="Your City">
+                                <p class="error-message">Please enter a valid city name</p>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2" for="state">State *</label>
+                                <select id="state" name="state" required 
+                                        class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                    <option value="">Select State</option>
+                                    <option value="AL">Alabama</option>
+                                    <option value="AK">Alaska</option>
+                                    <option value="AZ">Arizona</option>
+                                    <option value="AR">Arkansas</option>
+                                    <option value="CA">California</option>
+                                    <option value="CO">Colorado</option>
+                                    <option value="CT">Connecticut</option>
+                                    <option value="DE">Delaware</option>
+                                    <option value="FL">Florida</option>
+                                    <option value="GA">Georgia</option>
+                                    <option value="HI">Hawaii</option>
+                                    <option value="ID">Idaho</option>
+                                    <option value="IL">Illinois</option>
+                                    <option value="IN">Indiana</option>
+                                    <option value="IA">Iowa</option>
+                                    <option value="KS">Kansas</option>
+                                    <option value="KY">Kentucky</option>
+                                    <option value="LA">Louisiana</option>
+                                    <option value="ME">Maine</option>
+                                    <option value="MD">Maryland</option>
+                                    <option value="MA">Massachusetts</option>
+                                    <option value="MI">Michigan</option>
+                                    <option value="MN">Minnesota</option>
+                                    <option value="MS">Mississippi</option>
+                                    <option value="MO">Missouri</option>
+                                    <option value="MT">Montana</option>
+                                    <option value="NE">Nebraska</option>
+                                    <option value="NV">Nevada</option>
+                                    <option value="NH">New Hampshire</option>
+                                    <option value="NJ">New Jersey</option>
+                                    <option value="NM">New Mexico</option>
+                                    <option value="NY">New York</option>
+                                    <option value="NC">North Carolina</option>
+                                    <option value="ND">North Dakota</option>
+                                    <option value="OH">Ohio</option>
+                                    <option value="OK">Oklahoma</option>
+                                    <option value="OR">Oregon</option>
+                                    <option value="PA">Pennsylvania</option>
+                                    <option value="RI">Rhode Island</option>
+                                    <option value="SC">South Carolina</option>
+                                    <option value="SD">South Dakota</option>
+                                    <option value="TN">Tennessee</option>
+                                    <option value="TX">Texas</option>
+                                    <option value="UT">Utah</option>
+                                    <option value="VT">Vermont</option>
+                                    <option value="VA">Virginia</option>
+                                    <option value="WA">Washington</option>
+                                    <option value="WV">West Virginia</option>
+                                    <option value="WI">Wisconsin</option>
+                                    <option value="WY">Wyoming</option>
+                                </select>
+                                <p class="error-message">Please select a state</p>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2" for="zipCode">ZIP Code *</label>
+                                <input type="text" id="zipCode" name="zip_code" required 
+                                       pattern="[0-9]{5}(-[0-9]{4})?"
+                                       class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                       placeholder="12345">
+                                <p class="error-message">Please enter a valid ZIP code (e.g., 12345 or 12345-6789)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Emergency Contact -->
+                    <div class="form-card bg-white rounded-2xl shadow-lg p-8">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-6 flex items-center">
+                            <i class="fas fa-phone-alt text-green-600 mr-3"></i>
+                            Emergency Contact
+                        </h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2" for="emergencyName">Contact Name *</label>
+                                <input type="text" id="emergencyName" name="emergency_contact_name" required 
+                                       pattern="[A-Za-z\s\-']+"
+                                       class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                       placeholder="Jane Doe">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2" for="emergencyRelationship">Relationship *</label>
+                                <input type="text" id="emergencyRelationship" name="emergency_contact_relationship" required 
+                                       class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                       placeholder="Spouse, Parent, Sibling, Friend">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2" for="emergencyPhone">Contact Phone *</label>
+                                <input type="tel" id="emergencyPhone" name="emergency_contact_phone" required 
+                                       pattern="[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}"
+                                       class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                       placeholder="(555) 123-4567">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2" for="emergencyEmail">Contact Email</label>
+                                <input type="email" id="emergencyEmail" name="emergency_contact_email" 
+                                       class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                       placeholder="emergency@example.com">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skills & Interests -->
+                    <div class="form-card bg-white rounded-2xl shadow-lg p-8">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-6 flex items-center">
+                            <i class="fas fa-star text-yellow-600 mr-3"></i>
+                            Skills & Interests
+                        </h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-3">Areas of Interest (Select all that apply) *</label>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="interests[]" value="fire_safety" class="text-blue-600 focus:ring-blue-500">
+                                        <span class="ml-2">Fire Safety</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="interests[]" value="medical_operations" class="text-blue-600 focus:ring-blue-500">
+                                        <span class="ml-2">Medical Operations</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="interests[]" value="search_rescue" class="text-blue-600 focus:ring-blue-500">
+                                        <span class="ml-2">Light Search & Rescue</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="interests[]" value="communications" class="text-blue-600 focus:ring-blue-500">
+                                        <span class="ml-2">Communications</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="interests[]" value="logistics" class="text-blue-600 focus:ring-blue-500">
+                                        <span class="ml-2">Logistics & Supply</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="interests[]" value="team_organization" class="text-blue-600 focus:ring-blue-500">
+                                        <span class="ml-2">Team Organization</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="interests[]" value="community_outreach" class="text-blue-600 focus:ring-blue-500">
+                                        <span class="ml-2">Community Outreach</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="interests[]" value="training" class="text-blue-600 focus:ring-blue-500">
+                                        <span class="ml-2">Training & Education</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2" for="skills">Relevant Skills & Certifications</label>
+                                <textarea id="skills" name="skills_certifications" rows="4" 
+                                          class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                          placeholder="List any relevant skills, certifications, training, or expertise (e.g., CPR/First Aid, medical background, HAM radio, languages spoken, etc.)"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Availability -->
+                    <div class="form-card bg-white rounded-2xl shadow-lg p-8">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-6 flex items-center">
+                            <i class="fas fa-calendar-alt text-indigo-600 mr-3"></i>
+                            Availability
+                        </h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-3">When are you available? (Select all that apply) *</label>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="availability[]" value="weekday_mornings" class="text-blue-600 focus:ring-blue-500">
+                                        <span class="ml-2">Weekday Mornings</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="availability[]" value="weekday_afternoons" class="text-blue-600 focus:ring-blue-500">
+                                        <span class="ml-2">Weekday Afternoons</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="availability[]" value="weekday_evenings" class="text-blue-600 focus:ring-blue-500">
+                                        <span class="ml-2">Weekday Evenings</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="availability[]" value="weekends" class="text-blue-600 focus:ring-blue-500">
+                                        <span class="ml-2">Weekends</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="availability[]" value="on_call" class="text-blue-600 focus:ring-blue-500">
+                                        <span class="ml-2">On-Call/As Needed</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="availability[]" value="flexible" class="text-blue-600 focus:ring-blue-500">
+                                        <span class="ml-2">Flexible Schedule</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2" for="availabilityNotes">Additional Availability Notes</label>
+                                <textarea id="availabilityNotes" name="availability_notes" rows="3" 
+                                          class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                          placeholder="Any specific scheduling constraints or additional information..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Information -->
+                    <div class="form-card bg-white rounded-2xl shadow-lg p-8">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-6 flex items-center">
+                            <i class="fas fa-info-circle text-teal-600 mr-3"></i>
+                            Additional Information
+                        </h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2" for="tshirtSize">T-Shirt Size (for volunteer gear) *</label>
+                                <select id="tshirtSize" name="tshirt_size" required 
+                                        class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                    <option value="">Select Size</option>
+                                    <option value="XS">Extra Small (XS)</option>
+                                    <option value="S">Small (S)</option>
+                                    <option value="M">Medium (M)</option>
+                                    <option value="L">Large (L)</option>
+                                    <option value="XL">Extra Large (XL)</option>
+                                    <option value="2XL">2XL</option>
+                                    <option value="3XL">3XL</option>
+                                    <option value="4XL">4XL</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2" for="howHeard">How did you hear about us? *</label>
+                                <select id="howHeard" name="how_heard" required 
+                                        class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                    <option value="">Select Option</option>
+                                    <option value="social_media">Social Media</option>
+                                    <option value="website">Website</option>
+                                    <option value="friend_referral">Friend/Family Referral</option>
+                                    <option value="community_event">Community Event</option>
+                                    <option value="news_media">News/Media</option>
+                                    <option value="fire_department">Fire Department</option>
+                                    <option value="search_engine">Search Engine</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2" for="motivation">Why do you want to volunteer with AMY-CERT?</label>
+                                <textarea id="motivation" name="motivation" rows="4" 
+                                          class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                          placeholder="Tell us what motivates you to join our community emergency response team..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Legal Agreements -->
+                    <div class="form-card bg-white rounded-2xl shadow-lg p-8">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-6 flex items-center">
+                            <i class="fas fa-gavel text-blue-600 mr-3"></i>
+                            Agreements
+                        </h3>
+                        
+                        <div class="space-y-6">
+                            <div class="bg-slate-50 border border-slate-200 rounded-lg p-6">
+                                <h4 class="font-bold text-slate-800 mb-3">Code of Conduct</h4>
+                                <p class="text-sm text-slate-600 mb-4">
+                                    I agree to abide by all AMY-CERT policies, procedures, and code of conduct. I understand that I am representing the organization and will conduct myself professionally and respectfully at all times.
+                                </p>
+                                <label class="flex items-start">
+                                    <input type="checkbox" id="codeOfConduct" name="code_of_conduct" required class="text-blue-600 focus:ring-blue-500 mt-1">
+                                    <span class="ml-3 text-sm text-slate-700">
+                                        <strong>I agree to the Code of Conduct</strong> and will uphold the values and mission of AMY-CERT. *
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                                <label class="flex items-start">
+                                    <input type="checkbox" id="termsAgreement" name="terms_agreement" required class="text-blue-600 focus:ring-blue-500 mt-1">
+                                    <span class="ml-3 text-sm text-slate-700">
+                                        <strong>I certify that all information provided is accurate and complete</strong> to the best of my knowledge. *
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form Submission -->
+                    <div class="form-card bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 text-center border-2 border-blue-200">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-4">Submit Your Application</h3>
+                        <p class="text-slate-600 mb-6 max-w-2xl mx-auto">
+                            Thank you for your interest in volunteering with AMY-CERT. Once submitted, our volunteer coordinator will review your application and contact you within 5-7 business days.
+                        </p>
+
+                        <button type="submit" id="submitBtn"
+                                class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-12 rounded-xl text-xl transition duration-300 transform hover:scale-105 shadow-lg">
+                            <i class="fas fa-paper-plane mr-3"></i>
+                            Submit Volunteer Application
+                        </button>
+
+                        <p class="text-xs text-slate-500 mt-6">
+                            <i class="fas fa-shield-alt mr-1"></i>
+                            All data encrypted and secure • Processing time: 5-7 business days
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- What to Expect Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4">What to Expect Next</h2>
+                    <p class="text-xl text-slate-600">Your journey as an AMY-CERT volunteer</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="text-center p-6">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold text-blue-600">1</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Application Review</h3>
+                        <p class="text-slate-600 text-sm">We'll review your application within 5-7 business days</p>
+                    </div>
+                    
+                    <div class="text-center p-6">
+                        <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold text-green-600">2</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Orientation</h3>
+                        <p class="text-slate-600 text-sm">Attend a volunteer orientation session</p>
+                    </div>
+                    
+                    <div class="text-center p-6">
+                        <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold text-orange-600">3</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">CERT Training</h3>
+                        <p class="text-slate-600 text-sm">Complete CERT basic training course</p>
+                    </div>
+                    
+                    <div class="text-center p-6">
+                        <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold text-yellow-600">4</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Start Volunteering!</h3>
+                        <p class="text-slate-600 text-sm">Begin making a difference in your community</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-shield-alt text-blue-500 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold">AMY-CERT</h3>
+                    </div>
+                    <p class="text-slate-300 mb-4">
+                        Community Emergency Response Team - Trained volunteers ready to assist during emergencies.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Volunteer Inquiries</h4>
+                    <p class="text-slate-300 mb-2">
+                        <i class="fas fa-envelope mr-2"></i>
+                        <a href="mailto:volunteers@amycert.org" class="hover:text-white">volunteers@amycert.org</a>
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="index.html" class="block text-slate-300 hover:text-white">Home</a>
+                        <a href="index.html#training" class="block text-slate-300 hover:text-white">Training</a>
+                        <a href="contact.html" class="block text-slate-300 hover:text-white">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-slate-700 mt-8 pt-8 text-center">
+                <p class="text-slate-400">&copy; 2025 AMY-CERT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    if (icon) {
+                        icon.className = mobileMenu.classList.contains('hidden') ? 'fas fa-bars text-xl' : 'fas fa-times text-xl';
+                    }
+                });
+            }
+
+            // Form validation
+            const form = document.getElementById('volunteerRegistrationForm');
+            const inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
+
+            inputs.forEach(function(input) {
+                input.addEventListener('blur', function() {
+                    validateField(this);
+                });
+
+                input.addEventListener('input', function() {
+                    if (this.classList.contains('error')) {
+                        validateField(this);
+                    }
+                });
+            });
+
+            function validateField(field) {
+                const errorMsg = field.parentElement.querySelector('.error-message');
+                
+                if (!field.checkValidity()) {
+                    field.classList.add('error');
+                    if (errorMsg) errorMsg.classList.add('show');
+                    return false;
+                } else {
+                    field.classList.remove('error');
+                    if (errorMsg) errorMsg.classList.remove('show');
+                    return true;
+                }
+            }
+
+            // Age validation (must be 18+)
+            const dobInput = document.getElementById('dob');
+            if (dobInput) {
+                dobInput.addEventListener('change', function() {
+                    const dob = new Date(this.value);
+                    const today = new Date();
+                    const age = Math.floor((today - dob) / (365.25 * 24 * 60 * 60 * 1000));
+                    
+                    if (age < 18) {
+                        this.setCustomValidity('You must be at least 18 years old');
+                        validateField(this);
+                    } else {
+                        this.setCustomValidity('');
+                        validateField(this);
+                    }
+                });
+            }
+
+            // Form submission
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                let isValid = true;
+                inputs.forEach(function(input) {
+                    if (!validateField(input)) {
+                        isValid = false;
+                    }
+                });
+
+                if (isValid) {
+                    // Show success message (in production, this would submit to the API)
+                    const submitBtn = document.getElementById('submitBtn');
+                    submitBtn.innerHTML = '<i class="fas fa-check mr-3"></i>Application Submitted!';
+                    submitBtn.disabled = true;
+                    submitBtn.classList.add('bg-green-600');
+                    
+                    // In production, you would submit the form data to Cloudflare Workers/D1
+                    alert('Thank you for your application! We will contact you within 5-7 business days.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

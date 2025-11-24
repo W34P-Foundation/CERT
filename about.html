@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - AMY-CERT | Community Emergency Response Team</title>
+    <meta name="description" content="Learn about AMY-CERT Community Emergency Response Team, our mission, history, and the dedicated volunteers who serve our community.">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f0e8;
+            color: #1e293b;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a5f 0%, #0f2847 50%, #0a1929 100%);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <header class="bg-white/95 backdrop-blur-md fixed top-0 left-0 right-0 z-50 border-b border-blue-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <i class="fas fa-shield-alt text-blue-600 text-2xl mr-3"></i>
+                    <a href="index.html" class="text-xl font-bold text-slate-800">AMY-CERT</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex md:space-x-8">
+                    <a href="index.html#about" class="nav-link text-slate-600 hover:text-blue-600 transition duration-150">About</a>
+                    <a href="index.html#training" class="nav-link text-slate-600 hover:text-blue-600 transition duration-150">Training</a>
+                    <a href="volunteer-form.html" class="nav-link text-slate-600 hover:text-blue-600 transition duration-150">Volunteer</a>
+                    <a href="index.html#resources" class="nav-link text-slate-600 hover:text-blue-600 transition duration-150">Resources</a>
+                    <a href="contact.html" class="nav-link text-slate-600 hover:text-blue-600 transition duration-150">Contact</a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-slate-600 p-2" aria-label="Toggle mobile menu">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu" class="hidden md:hidden">
+                <nav class="flex flex-col px-2 py-4 space-y-3 bg-white border-t border-blue-100">
+                    <a href="index.html#about" class="text-slate-600 hover:text-blue-600 py-2 px-3 rounded-lg hover:bg-blue-50">About</a>
+                    <a href="index.html#training" class="text-slate-600 hover:text-blue-600 py-2 px-3 rounded-lg hover:bg-blue-50">Training</a>
+                    <a href="volunteer-form.html" class="text-slate-600 hover:text-blue-600 py-2 px-3 rounded-lg hover:bg-blue-50">Volunteer</a>
+                    <a href="index.html#resources" class="text-slate-600 hover:text-blue-600 py-2 px-3 rounded-lg hover:bg-blue-50">Resources</a>
+                    <a href="contact.html" class="text-slate-600 hover:text-blue-600 py-2 px-3 rounded-lg hover:bg-blue-50">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="hero-gradient py-16 text-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                    About AMY-CERT
+                </h1>
+                <p class="text-xl text-blue-100">
+                    Building resilient communities through trained volunteer response.
+                </p>
+            </div>
+        </section>
+
+        <!-- Our Mission -->
+        <section class="py-20 bg-slate-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-slate-800 mb-8 text-center">Our Mission</h2>
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <p class="text-lg text-slate-600 mb-6">
+                        AMY-CERT is dedicated to educating and training community members in basic disaster response skills. Our mission is to empower individuals to help their neighbors, families, and communities during emergencies when professional responders may be overwhelmed or delayed.
+                    </p>
+                    <p class="text-lg text-slate-600">
+                        Through comprehensive training programs, community outreach, and partnership with local emergency services, we build stronger, more resilient neighborhoods that can effectively respond to any crisis.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- What We Do -->
+        <section class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-slate-800 mb-12 text-center">What We Do</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="p-8 bg-blue-50 rounded-xl">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-graduation-cap text-3xl text-blue-600 mr-4"></i>
+                            <h3 class="text-xl font-bold text-slate-800">Training Programs</h3>
+                        </div>
+                        <p class="text-slate-600">We provide comprehensive CERT training covering fire safety, medical operations, light search and rescue, and team organization. All training is free for community members.</p>
+                    </div>
+                    
+                    <div class="p-8 bg-green-50 rounded-xl">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-hands-helping text-3xl text-green-600 mr-4"></i>
+                            <h3 class="text-xl font-bold text-slate-800">Community Support</h3>
+                        </div>
+                        <p class="text-slate-600">Our trained volunteers are ready to assist during disasters, providing immediate support while professional responders address the most critical situations.</p>
+                    </div>
+                    
+                    <div class="p-8 bg-orange-50 rounded-xl">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-bullhorn text-3xl text-orange-600 mr-4"></i>
+                            <h3 class="text-xl font-bold text-slate-800">Public Outreach</h3>
+                        </div>
+                        <p class="text-slate-600">We organize community events, workshops, and presentations to educate residents about emergency preparedness and disaster response.</p>
+                    </div>
+                    
+                    <div class="p-8 bg-purple-50 rounded-xl">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-network-wired text-3xl text-purple-600 mr-4"></i>
+                            <h3 class="text-xl font-bold text-slate-800">Coordination</h3>
+                        </div>
+                        <p class="text-slate-600">We work closely with local fire departments, emergency management agencies, and other organizations to ensure effective disaster response.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CERT Program Overview -->
+        <section class="py-20 bg-slate-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-slate-800 mb-8 text-center">About the CERT Program</h2>
+                
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <p class="text-lg text-slate-600 mb-6">
+                        The Community Emergency Response Team (CERT) program is a nationally supported initiative that educates volunteers about disaster preparedness and trains them in basic disaster response skills.
+                    </p>
+                    <p class="text-lg text-slate-600 mb-6">
+                        Using training learned in the classroom and during exercises, CERT members can assist others in their neighborhood or workplace following an event when professional responders are not immediately available to help.
+                    </p>
+                    <p class="text-lg text-slate-600">
+                        The CERT program is supported by the Federal Emergency Management Agency (FEMA) and is typically sponsored at the local level by fire departments, emergency management offices, or other local government agencies.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Join Us CTA -->
+        <section class="py-20 bg-blue-600 text-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold mb-6">Ready to Make a Difference?</h2>
+                <p class="text-xl text-blue-100 mb-8">
+                    Join our team of dedicated volunteers and help build a safer, more prepared community.
+                </p>
+                <a href="volunteer-form.html" class="bg-yellow-500 text-black font-bold py-4 px-8 rounded-lg text-lg hover:bg-yellow-400 transition duration-150 inline-block">
+                    <i class="fas fa-user-plus mr-2"></i>
+                    Become a Volunteer
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-shield-alt text-blue-500 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold">AMY-CERT</h3>
+                    </div>
+                    <p class="text-slate-300 mb-4">Community Emergency Response Team - Trained volunteers ready to assist their communities during disasters and emergencies.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-slate-400 hover:text-white" aria-label="Facebook"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-white" aria-label="Twitter"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-white" aria-label="Instagram"><i class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact Us</h4>
+                    <div class="space-y-3">
+                        <p class="text-slate-300">
+                            <i class="fas fa-envelope text-blue-500 mr-2"></i>
+                            <a href="mailto:info@amycert.org" class="hover:text-white">info@amycert.org</a>
+                        </p>
+                        <p class="text-slate-300">
+                            <i class="fas fa-globe text-blue-500 mr-2"></i>
+                            <a href="https://amycert.org" class="hover:text-white">amycert.org</a>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="index.html#about" class="block text-slate-300 hover:text-white">About CERT</a>
+                        <a href="index.html#training" class="block text-slate-300 hover:text-white">Training Programs</a>
+                        <a href="volunteer-form.html" class="block text-slate-300 hover:text-white">Volunteer Registration</a>
+                        <a href="index.html#resources" class="block text-slate-300 hover:text-white">Emergency Resources</a>
+                        <a href="contact.html" class="block text-slate-300 hover:text-white">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-slate-700 mt-12 pt-8 text-center">
+                <p class="text-slate-400">&copy; 2025 AMY-CERT. All rights reserved. Built with ❤️ for community safety.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    if (icon) {
+                        icon.className = mobileMenu.classList.contains('hidden') ? 'fas fa-bars text-xl' : 'fas fa-times text-xl';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
